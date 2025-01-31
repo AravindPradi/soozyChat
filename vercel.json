@@ -11,13 +11,5 @@
       "src": "/(.*)",
       "dest": "/project/wsgi.py"
     }
-  ],
-  "env": {
-    "DJANGO_SECRET_KEY": "@django_secret_key",
-    "DJANGO_SETTINGS_MODULE": "project.settings",
-    "DATABASE_URL": "@database_url",
-    "ALLOWED_HOSTS": "your-domain.vercel.app",
-    "DEBUG": "false",
-    "CHANNEL_LAYERS": "redis://localhost:6379" 
-  }
+  ]
 }
