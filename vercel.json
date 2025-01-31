@@ -1,20 +1,23 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "project/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "50mb" , "runtime": "python3.13.1"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "project/wsgi.py"
-      }
-    ]
-    
+  "version": 2,
+  "builds": [
+    {
+      "src": "project/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/project/wsgi.py"
+    }
+  ],
+  "env": {
+    "DJANGO_SECRET_KEY": "@django_secret_key",
+    "DJANGO_SETTINGS_MODULE": "project.settings",
+    "DATABASE_URL": "@database_url",
+    "ALLOWED_HOSTS": "your-domain.vercel.app",
+    "DEBUG": "false",
+    "CHANNEL_LAYERS": "redis://localhost:6379"  // If using Redis for Channels
   }
-  
+}
