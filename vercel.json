@@ -18,6 +18,6 @@
     "DATABASE_URL": "@database_url",
     "ALLOWED_HOSTS": "your-domain.vercel.app",
     "DEBUG": "false",
-    "CHANNEL_LAYERS": "redis://localhost:6379"  // If using Redis for Channels
+    "CHANNEL_LAYERS": "redis://localhost:6379" 
   }
 }
